@@ -19,12 +19,22 @@
 """
 
 # Write your function here
-
+def number_of_appearances(given_list):
+    maximum = given_list[0]
+    max_rep = 1
+    for i in given_list:
+        if given_list.count(i) > max_rep:
+            max_rep = given_list.count(i)
+            maximum = i
+    return maximum, max_rep
 
 
 def main():
-    # Test your function here
+    int_list = [1, 2, 2, 2, 3, 4, 5]
+    print(number_of_appearances(int_list))
     pass
 
+
+
 if __name__ == "__main__":
-main()
+    main()
